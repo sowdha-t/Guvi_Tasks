@@ -3,6 +3,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+from login_page import TestLoginPage
+
+
 @pytest.fixture
 def driver():
     options = webdriver.ChromeOptions()
@@ -31,3 +34,11 @@ def driver():
     driver.implicitly_wait(2)
     yield driver
     driver.quit()
+
+@pytest.fixture
+def login_page(driver):
+    page = TestLoginPage(driver)
+    page.get_guvi_page()
+    page.click_login_link()
+    return page
+

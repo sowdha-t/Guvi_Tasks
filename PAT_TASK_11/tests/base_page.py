@@ -1,3 +1,4 @@
+from selenium.common import StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -39,4 +40,15 @@ class BasePage:
             EC.url_contains(text)
         )
         return self.driver.current_url
+
+    def wait_for_visible(self, locator, retries=3):
+        attempt = 0
+        while attempt < retries:
+            try:
+                return WebDriverWait(self.driver, self.timeout).until(
+                    EC.visibility_of_element_located(locator)
+                )
+            except StaleElementReferenceException:
+                attempt += 1
+        raise Exception(f"Element {locator} still stale after {retries} retries")
 
