@@ -1,0 +1,7 @@
+{
+  "base_url" : "https://v2.zenclass.in/",
+  "time_out" : 10,
+  "login_url" : "/login",
+  "dashboard_url" : "/dashboard"
+
+}

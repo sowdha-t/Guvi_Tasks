@@ -1,0 +1,40 @@
+# OS Generated Files (Windows specific)
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Automation Testing Logs & Reports
+*.log
+test-output/
+target/
+allure-results/
+
+# Dependency Folders (Never upload these!)
+node_modules/
+.env
+
+#For python related files
+__pycache__/
+*.py[cod]
+*$py.class
+
+#Python virtual environments
+venv/
+.venv/
+env/
+
+#Playwright specific files
+test-results/
+playwright-report/
+.playwright/
+
+main.py
+#Selenium/Driver logs
+geckodriver.log
+chromedriver.log
+
+#External Libraries
+External Libraries/
+Extensions/
+#Ignore Pycharm Project configuration files
+.idea/
