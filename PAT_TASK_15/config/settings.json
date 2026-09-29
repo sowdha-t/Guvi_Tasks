@@ -1,0 +1,8 @@
+{
+  "base_url" : "https://opensource-demo.orangehrmlive.com/web/index.php",
+  "time_out" : 10,
+  "login_url" : "/auth/login",
+  "dashboard_url" : "/dashboard/index",
+  "excel_data_file_location" : "data/Test_Data.xlsx"
+
+}
